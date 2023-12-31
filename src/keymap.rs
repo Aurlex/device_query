@@ -2,10 +2,12 @@
 
 use std::fmt;
 use std::str::FromStr;
+use pyo3::prelude::*;
 
 /// A list of supported keys that we can query from the OS. Outside of mod.
-#[derive(Debug, Eq, PartialEq, Hash, Clone, Copy)]
+#[derive(Debug, Eq, PartialEq, Hash, Clone, Copy, Ord, PartialOrd)]
 #[allow(missing_docs)]
+#[pyclass(name = "Key")]
 pub enum Keycode {
     Key0,
     Key1,

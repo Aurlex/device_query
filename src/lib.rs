@@ -40,6 +40,7 @@
 
 #[macro_use]
 extern crate lazy_static;
+extern crate pyo3;
 
 #[cfg(target_os = "windows")]
 extern crate windows;
